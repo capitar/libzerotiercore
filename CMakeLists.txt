@@ -49,7 +49,7 @@ endif()
 file(GLOB ztsrcs ZeroTierOne/node/*.cpp)
 add_library(${PROJECT_NAME} ${ztsrcs})
 
-target_compile_options(${PROJECT_NAME} PRIVATE -DZT_TRACE -DZT_SDK=0)
+target_compile_options(${PROJECT_NAME} PRIVATE -DZT_TRACE)
 
 # Because we are going to expose this as a C library, we need to depend on
 # the C++ runtime.
